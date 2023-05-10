@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+*
+{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+    
+}
+     /* HEADER start */
+header
+{
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    background-image: url(./background\ img.jpg);
+}
+
+     /* LEFT HEADER start */
+.left-header
+{
+    width: 22%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+}
+       /* LOGO */
+.logo
+{
+    width: 100%;
+    height: 250px;
+    position: relative;
+}
+
+        /* BORDER-1 */
+.border-1
+{
+    width: 60%;
+    height: 50%;
+    border: 1px solid white;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+}
+      /* BORDER-2 */
+.border-2
+{
+    width: 60%;
+    height: 50%;
+    border: 1px solid white;
+    position: absolute;
+    top: 28%;
+    left: 22%;
+}
+        /* COMPONY NAME */
+.company_name
+{
+    position: absolute;
+    top: 39%;
+    left: 37%;
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+         /* NAV start */
+nav
+{
+    width: 100%;
+    height: 200px;
+    display: flex;
+}
+           /* UNORDERD LIST */
+nav ul
+{
+    width: 65%;
+    height: inherit;
+    text-align: right;
+}
+        /* LIST */
+nav ul li
+{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+         /* A link */
+nav ul li a
+{
+    color: white;
+}
+         /* Hover a link ke upar  */
+nav ul li a:hover
+{
+    text-decoration: underline;
+}
+
+.square_box
+{
+    width: 35%;
+    height: inherit;
+}
+.square_box i
+{
+    width: 100%;
+    height: 40px;
+    color: white;
+    line-height: 40px;
+    padding-left: 20px;
+}
+
+       /* ICONS */
+
+.icons
+{
+    width: 100%;
+    height: 80px;
+    margin-top: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.icons a
+{
+    color: black;
+}
+.icons a i
+{
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 18px;
+}
+.icons a:hover
+{
+    color: white;
+    transition: 0.3s ease;
+}
+.icons a i:hover
+{
+    background-color: black;
+    transition: 0.5s ease;
+}
+
+.copyrite_notice
+{
+    width: 100%;
+    height: 100px;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 25px;
+    line-height: 30px;
+}
+       /* RIGHT SIDE HEADER  */
+.right-header
+{
+    width: 78%;
+    height: 100vh;
+    position: relative;
+}
+
+.introduce-main
+{
+    width: 37%;
+    height: 45%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid white;
+    position: absolute;
+    left: 1020px;
+    top: 200px;
+}
+
+.introduce
+{
+    width: 76%;
+    height: 100%;
+    margin: 0% 12%;
+}
+
+.introduce-title
+{
+    width: 100%;
+    height: 30%;
+    line-height: 100px;
+    color: rgb(0, 183, 255);
+    text-shadow: 0 0 0.5px rgb(0, 183, 255);
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.introduce-para
+{
+
+    width: 100%;
+    height: 70%;
+    color: #666;
+    font-size: 16px;
+    line-height: 25px;
+}
+.about
+{
+    width: 100%;
+    height: 550px;
+    display: flex;
+}
+.left-about
+{
+    width: 22%;
+    height: inherit;
+    background-color: #666;
+}
+.right-about-main
+{
+    width: 78%;
+    height: inherit;
+}
+.right-about-sub
+{
+    width: 75%;
+    height: inherit;
+    margin: 0% 16% 0% 9%;
+    display: flex;
+}
+.about_us
+{
+    width: 43%;
+    height: inherit;
+}
+.about-icon
+{
+    width: 100%;
+    height: 150px;
+    color: #369;
+    font-size: 90px;
+    padding-top: 40px;
+}
+.about-title
+{
+    width: 100%;
+    height: 50px;
+    color: #369;
+    font-size: 20px;
+    text-shadow: 0 0 1px rgb(48, 48, 200);
+}
+.about-para
+{
+    width: 100%;
+    height: 350px;
+    color: #707172;
+    font-size: 16px;
+    line-height: 25px;
+}
+.about_us:last-child
+{
+    margin-left: 14%;
+}
+   /* OUR WORK */
+.our_work-main
+{
+    width: 100%;
+    height: 600px;
+    display: flex;
+}
+
+.our_work-left
+{
+    width: 22%;
+    height: inherit;
+    background-color: #666;
+}
+
+
+.our_work-right
+{
+    width: 78%;
+    height: inherit;
+    position: relative;
+}
+.our_work-border-1
+{
+    width: 90%;
+    height: 450px;
+    border: 1px solid #cdcecf;
+    position: absolute;
+    top: 10px;
+    left: 5%;
+}
+.our_work-border-2
+{
+    width: 90%;
+    height: 450px;
+    border: 1px solid #cdcecf;
+    position: absolute;
+    top: 20px;
+    left: 6%;
+}
+
+.our_work
+{
+    width: 80%;
+    height: 350px;
+    position: absolute;
+    top: 60px;
+    left: 10%;
+}
+.our_work-title
+{
+    width: 100%;
+    height: 40px;
+    color: #069;
+    font-size: 25px;
+    text-shadow: 0 0 0.5px #069;
+}
+.our_work-images
+{
+    width: 100%;
+    height: 310px;
+    display: flex;
+    justify-content: space-between;
+}
+.work-img
+{
+    width: 23.5%;
+    height: inherit;
+    cursor: pointer;
+}
+    /* OUR CLIENTS START */
+.our_clients-main
+{
+    width: 100%;
+    height: 500px;
+    display: flex;
+}
+.our_clients-left
+{
+    width: 22%;
+    height: inherit;
+    background-color: #666;
+}
+
+.our_clients-right
+{
+    width: 78%;
+    height: inherit;
+}
+.our_clients-title
+{
+    width: 84%;
+    height: 50px;
+    margin: 0% 8%;
+    color: #069;
+    font-size: 28px;
+    text-shadow: 0 0 0.5px #069;
+}
+.our_clients-para
+{
+    width: 84%;
+    height: 120px;
+    margin: 0% 8%;
+    color: #707172;
+    font-size: 18px;
+    line-height: 28px;
+}
+.our_clients-images
+{
+    width: 84%;
+    height: 250px;
+    margin: 0% 8%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.our_clients-image-border
+{
+    width: 23.5%;
+    height: 100px;
+    cursor: pointer;
+    border: 1px solid #cdcecf;
+}
+.our_clients-image-border img
+{
+    width: 70%;
+    height: 60px;
+    margin: 20px 15%;
+}
+.talk_to_us-main
+{
+    width: 100%;
+    height: 400px;
+    display: flex;
+}
+
+.talk_to_us-left
+{
+    width: 22%;
+    height: inherit;
+    background-color: #666;
+}
+
+.talk_to_us-right
+{
+    width: 78%;
+    height: inherit;
+    position: relative;
+    display: flex;
+}
+.talk_to_us_right-left
+{
+    width: 60%;
+    height: inherit;
+}
+.talk_to_us-border-1
+{
+    width: 45%;
+    height: 300px;
+    border: 1px solid #cdcecf;
+    position: absolute;
+    top: 10px;
+    left: 5%;
+}
+.talk_to_us-border-2
+{
+    width: 45%;
+    height: 300px;
+    border: 1px solid #cdcecf;
+    position: absolute;
+    top: 20px;
+    left: 6%;
+}
+.talk_to_us
+{
+    width: 35%;
+    height: 250px;
+    position: absolute;
+    top: 40px;
+    left: 10%;
+}
+.talk_to_us-title
+{
+    width: 84%;
+    height: 50px;
+    margin-top: 10px;
+    color: #069;
+    font-size: 24px;
+    text-shadow: 0 0 0.5px #069;
+}
+.talk_to_us-para
+{
+    width: 100%;
+    height: auto;
+    color: #707172;
+    font-size: 18px;
+    line-height: 28px;
+    font-family: "Open Sans",Arial,Helvetica,sans-serif;
+}
+
+
+.talk_to_us_right-right
+{
+    width: 30%;
+    height: inherit;
+}
+
+form
+{
+    width: 100%;
+    height: inherit;
+}
+
+form input[type=text]
+{
+    width: 80%;
+    height: 30px;
+    margin: 15px 10%;
+    border: none;
+    border-bottom: 1px solid #666;
+}
+
+
+form input[type=email]
+{
+    width: 80%;
+    height: 30px;
+    margin: 15px 10%;
+    border: none;
+    border-bottom: 1px solid #666;
+}
+form input:focus
+{
+    outline: none;
+    border-bottom: 1px solid skyblue;
+    caret-color: red;
+}
+
+form textarea
+{
+    width: 80%;
+    height: 100px;
+    margin: 15px 10%;
+    border: none;
+    border-bottom: 1px solid #666;
+}
+form textarea:focus
+{
+    outline: none;
+    border-bottom: 1px solid skyblue;
+    caret-color: red;
+}
+form textarea::placeholder
+{
+    font-family: arial;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+form input[type=submit]
+{
+    width: 70px;
+    height: 30px;
+    margin: 10px 0% 0px 70%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #666;
+    font-size: 15px;
+    font-family: arial;
+}
+form input[type=submit]:hover
+{
+    cursor: pointer;
+    background-color: #707172;
+    color: white;
+    transition: 0.3s ease;
+}
+    </style>
+</head>
+<body>
+       <!-- HEADER START -->
+     <header>
+        <!-- <img src="\asses 1images\Header BG img.jpg" alt=""> -->
+         <!-- LEFT SIDE HEADER START -->
+        <div class="left-header">
+
+            <div class="logo">
+                <div class="border-1"></div>
+                <div class="border-2"></div>
+                <div class="company_name"> DREAM <br> PULSE </div>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#"> INTRO </a></li>
+                    <li><a href="#"> ABOUT </a></li>
+                    <li><a href="#"> WORK </a></li>
+                    <li><a href="#"> CLIENTS </a></li>
+                    <li><a href="#"> LET'S TALK </a></li>
+                </ul>
+                <div class="square_box">
+                    <i class="fa-regular fa-square"></i>
+                </div>
+            </nav>
+
+            <div class="icons">
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-futbol"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+
+            <div class="copyrite_notice">
+                Copyright 2020 Dream Pulse <br>
+                Design Template Mo
+            </div>
+
+        </div>
+         v    <!-- LEFT SIDE HEADER END -->
+              <!-- RIGHT SIDE HEADER START -->
+        <div class="right-header">
+
+            <div class="introduce-main">
+                <div class="introduce">
+
+                    <div class="introduce-title">
+                        Introducing Dream Pulse
+                    </div>
+                    <div class="introduce-para">
+                        This box alpha 30 percent. Left sidebar is a <br>
+                        sticky element. Right side Contents are <br>
+                        scrolling up and down. This background has a <br>
+                        parallax effect.
+                        <br><br>
+                        Dream Pulse is a Bootstrap 4.3.1 template <br>
+                        designing for your websites. You can modiy <br>
+                        this layout as you like.
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+         <!-- RIGHT SIDE HEADER END  -->
+    </header>
+        <!-- HEADER END -->
+           <!-- ABOUT START -->
+    <section class="about">
+
+        <div class="left-about"></div>
+
+        <div class="right-about-main">
+            <div class="right-about-sub">
+
+                <div class="about_us">
+                    <div class="about-icon">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <div class="about-title">
+                        About Us
+                    </div>
+                    <div class="about-para">
+                        When first section is scrolled up, BG image will be <br> disappeared with a parallax effect. Donec ac tempor <br> tellus, a eleifend ligula. Fusce vitae sem sed purus <br> euismod condimentum.
+                        <br><br>
+                        Sed at orci non metus tristique suscipit vitae <br> 
+                        in nibh. Sed rutrum odio ac est hendrerit, at <br> vestibulum felis condimentum.
+                    </div>
+                </div>
+
+                <div class="about_us">
+                    <div class="about-icon">
+                        <i class="fa-regular fa-building"></i>
+                    </div>
+                    <div class="about-title">
+                        Company Profile
+                    </div>
+                    <div class="about-para">
+                        You can use this template for your commercial <br> websites or for your clients. You ar NOT allowed to <br>
+                        re-post the template as a downloadable ZIP file on <br>
+                        your template collection sites. It is illegal.
+                        <br><br>
+                        Suspendisse fermentum orci eget lorem euismod <br> suscipit. Morbi condimentum odio metus, at finibus <br> dolor sollicitudin quis. Curabitur eu congue erat.
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </section>
+               <!-- ABOUT END -->
+               <!-- OUR WORK START -->
+    <section class="our_work-main">
+        <section class="our_work-left"> </section>
+        
+        <section class="our_work-right"> 
+
+            <div class="our_work-border-1"></div>
+            <div class="our_work-border-2"></div>
+
+            <div class="our_work">
+                <div class="our_work-title">
+                    Our Work
+                </div>
+                <div class="our_work-images">
+                    <img class="work-img" src="\asess images\Our Work img 1.jpg" alt="">
+                    <img class="work-img" src="\asess images\Our Work img 2.jpg" alt="">
+                    <img class="work-img" src="\asess images\Our Work img 3.jpg" alt="">
+                    <img class="work-img" src="\asess images\Our Work img 4.jpg" alt="">
+                </div>
+            </div>
+
+        </section>
+     </section>
+          <!--OUR WORK END -->
+          <!--OUR CLIENT START -->
+    <section class="our_clients-main">
+        <section class="our_clients-left"> </section>
+
+        <section class="our_clients-right"> 
+                
+            <div class="our_clients-title">
+                Our Clients
+            </div>
+            <div class="our_clients-para">
+                Aenean est augue, iaculis ut arcu a, cursus tempus eros. Maecenas ut efficitur lectus, vel commodo <br> 
+                nibh. Vivamus consequat massa non euismod facilisis. Morbi assumsan non libero a vehicula. Donec <br>
+                blandit suscipit magna sit amet elementum.
+            </div>
+
+            <div class="our_clients-images">
+                <div class="our_clients-image-border">
+                    <img src="\asess images\Our Clients - myob.png" alt="">
+                </div>
+                <div class="our_clients-image-border">
+                    <img src="\asess images\Our Clients - Belimo.png" alt="">
+                </div>
+                <div class="our_clients-image-border">
+                    <img src="\asess images\Our Clients - Life Groups.png" alt="">
+                </div>
+                <div class="our_clients-image-border">
+                    <img src="\asess images\Our Clients - Lilly.png" alt="">
+                </div>
+
+                <div class="our_clients-image-border">
+                    <img src="\asess images\Our Clients - Citrus.png" alt="">
+                </div>
+                <div class="our_clients-image-border">
+                    <img src="\asess images\Our Clients - Trustly.png" alt="">
+                </div>
+                <div class="our_clients-image-border">
+                    <img src="\asess images\Our Clients - Oldendrff.png" alt="">
+                </div>
+                <div class="our_clients-image-border">
+                    <img src="\asess images\Our Clients - Grabyo.png" alt="">
+                </div>
+            </div>  
+
+        </section>
+    </section>
+          <!-- OUR CLIENT END -->
+           <!-- TALK TO US START -->
+    <section class="talk_to_us-main">
+
+        <section class="talk_to_us-left"> </section>
+
+        <section class="talk_to_us-right"> 
+            
+            <div class="talk_to_us_right-left">
+
+                <div class="talk_to_us-border-1"></div>
+                <div class="talk_to_us-border-2"></div>
+
+                <div class="talk_to_us">
+                    <div class="talk_to_us-title">
+                        Talk to Us
+                    </div>
+                    <div class="talk_to_us-para">
+                        Sed aliquet, nibh ac hendrerit faucibus, tellus <br> 
+                        metus viverra tellus, vel volutpat purus orci ac ex.
+                        <br><br>
+                        120-240 Orci varius natoque penatibus, <br>
+                        parturient montes, 10660 <br>
+                        nasvetur ridiculus mus
+                    </div>
+                </div>
+            </div>
+
+            <div class="talk_to_us_right-right">
+
+                <form action="">
+
+                    <input type="text" placeholder="   Your Name" required>
+                    <input type="email" placeholder="   Your Email" required>
+                    <textarea placeholder="   Message..." required></textarea>
+                    <input type="submit">
+                
+                </form>
+
+            </div>
+        
+        </section>
+
+    </section>
+    <!-- TALK TO US END -->
+</body>
+</html>
