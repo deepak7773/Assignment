@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2 id="question">ARE YOU READY FOR THIS CONFERENCE HONOR - 2023</h2>
+    <button id="sure" onclick="sure_quiz()"> YES </button> 
+    <button id="notsure" onclick="second()"> NO </button>
+
+
+    <script>
+
+      var question = document.getElementById("question");
+      var sure = document.getElementById("sure");
+      var notsure = document.getElementById("notsure");
+
+
+    function sure_quiz() 
+    {
+
+     var q1 = confirm("Are you teacher in this school very long time ?");
+        if (q1 == true) 
+       {
+        var yess = confirm("you are selected for principal post. do you agree for this post ?");
+        if (yess == true)
+        {
+          alert("you agreed for this post.");
+        }
+        else
+        {
+          alert("you are not accept this post.");
+        }
+       }
+    }   
+    </script>
+</body>
+</html>
