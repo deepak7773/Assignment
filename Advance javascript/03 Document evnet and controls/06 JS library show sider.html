@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title> Slider </title>
+
+    <style>
+        body
+        {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 97vh;
+        }
+
+        .slider-container {
+            width: 800px;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+        }
+
+        .slider {
+            display: flex;
+            width: 100%;
+            transition: 1s ease;
+        }
+
+        .slide {
+            flex: 1 0 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .slide img
+        {
+            width: 100%;
+            height: 100%;
+        }
+
+        .prev-btn, .next-btn 
+        {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 5px 10px;
+            border: none;
+            background-color: rgba(0,0,0,0.3);
+            color: #fff;
+            font-size: 16px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+        .prev-btn 
+        {
+            left: 10px;
+        }
+        .prev-btn:hover 
+        {
+            color: lightcyan;
+        }
+
+        .next-btn 
+        {
+            right: 10px;
+        }
+        .next-btn:hover 
+        {
+            color: lightcyan;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide"><img src="images/young-woman-rider-with-her-horse-evening-sunset-light-outdoor-photography-lifestyle-mood-equestrianism-horse-riding-horse-racing-rider-horse_639032-.avif" alt=""></div>
+            <div class="slide"><img src="images/pensive-man-riding-down-hill_329181-8688.avif" alt=""></div>
+            <div class="slide"><img src="images/outdoor-fence-wood-bicycle-old-fashioned-generative-ai_188544-7903.avif" alt=""></div>
+            <div class="slide"><img src="images/three-skiers-relaxing-snow-covered-mountain_107420-96444.avif" alt=""></div>
+            <div class="slide"><img src="images/gate-hinge-welding-underground_789096-6709.avif" alt=""></div>
+        </div>
+        <button class="prev-btn"> Previous <i class="fa-sharp fa-solid fa-left"></i> </button>
+        <button class="next-btn"> Next </button>
+    </div>
+
+
+
+    <script>
+
+        $(document).ready(function () {
+
+            var slider = $('.slider');
+            var slideWidth = $('.slide').width();
+            var slideCount = $('.slide').length;
+            var currentIndex = 0;
+
+            function showSlide(index) {
+                var newPosition = -index * slideWidth;
+                slider.css('transform', 'translateX(' + newPosition + 'px)');
+                currentIndex = index;
+            }
+
+            $('.prev-btn').click(function () {
+                var newIndex = currentIndex - 1;
+                if (newIndex < 0) {
+                    newIndex = slideCount - 1;
+                }
+                showSlide(newIndex);
+            })
+
+            $('.next-btn').click(function () {
+                var newIndex = currentIndex + 1;
+                if (newIndex > 4) {
+                    newIndex = slideCount - 5;
+                }
+                showSlide(newIndex);
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

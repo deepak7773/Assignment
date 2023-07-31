@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--  when button click function call onclick function -->
+    <button onclick="sum_function()">CLICK HERE TO GET SUM</button>
+    <script>
+            function salaries_sum(salaries)
+            {
+                var salaryValues = Object.values(salaries)
+
+                var sum = 0;
+
+                for (var salary of salaryValues)
+                {
+                    sum += salary;
+                }
+                return sum;
+            }
+
+            function sum_function()
+            {
+                var salaries = {"john" : 100, "mary" : 250, "pete" : 300 };
+
+                alert(salaries_sum(salaries));   // here we give alert for showing salaries
+            }
+    </script>
+</body>
+</html>

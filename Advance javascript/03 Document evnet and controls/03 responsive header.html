@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            
+        }
+        header
+        {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            background-color: black;
+        }
+        .logo
+        {
+            font-size: 30px;
+            width: 20%;
+            height: inherit;
+     
+        }
+        span
+        {       
+            line-height: 65px;
+            padding-left: 40px;
+            color: gold;
+            font-size: 1rem;
+
+        }
+        nav
+        {
+            width: 60%;
+            height: inherit;
+            background-color: transparent;
+            margin-left: 2%;
+        }
+        nav ul
+        {
+            display: flex;
+        }
+        nav ul li
+        {
+            list-style: none;
+            padding: 10px 20px 15px;
+            line-height: 40px;
+            font-size: 25px;
+            margin-left: 5%;
+        }
+        nav ul li a
+        {
+            text-decoration: none;
+            color: wheat;
+        }
+        .fa-bars
+        {
+            line-height: 55px;
+            padding-top: 5px;
+            float: right;
+            margin-left: 17%;
+            font-size: 25px;
+            display: none;
+            color: white;
+        }
+
+       
+        @media (min-width:769px) and (max-width:1024px) 
+        {
+            *
+        {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            
+        }
+        header
+        {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            background-color: black;
+        }
+            .logo
+        {
+            font-size: 30px;
+            width: 30%;
+            height: inherit;
+     
+        }
+        span
+        {       line-height: 65px;
+            padding-left: 40px;
+            color: gold;
+
+        }
+        nav
+        {
+            width: 70%;
+            height: inherit;
+            background-color: transparent;
+            position: relative;
+            display: block;
+            margin-left: 2%;
+        }
+        nav ul
+        {
+
+            display: none;
+            position: absolute;
+            background-color: black;
+            width: 156%;
+            top: 72px;
+            right: 0px;
+        }
+        nav ul li
+        {
+            list-style: none;
+            text-align: center;
+            line-height: 40px;
+            font-size: 25px;
+          left: 100px;
+            display: block;
+        }
+        nav ul li a
+        {
+            text-decoration: none;
+            color: wheat;
+        }
+        .fa-bars
+        {
+            line-height: 50px;
+            float: right;
+            margin-right: 8%;
+            font-size: 30px;
+            display: block;
+            color: white;
+        }
+        }
+
+        /* FOR TABLET */
+              
+        @media (min-width:481px) and (max-width:768px) 
+        {
+            *
+        {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            
+        }
+        header
+        {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            background-color: black;
+        }
+            .logo
+        {
+            font-size: 30px;
+            width: 70%;
+            height: inherit;
+     
+        }
+        span
+        {       line-height: 65px;
+            padding-left: 40px;
+            color: gold;
+
+        }
+        nav
+        {
+            width: 70%;
+            height: inherit;
+            background-color: transparent;
+            position: relative;
+            display: block;
+            margin-left: 2%;
+        }
+        nav ul
+        {
+            display: none;
+            position: absolute;
+            background-color: black;
+            width: 45rem;
+            top: 72px;
+            right: 0px;
+        }
+        nav ul li
+        {
+            list-style: none;
+            text-align: center;
+            line-height: 40px;
+            font-size: 25px;
+            left: 100px;
+            display: block;
+        }
+        nav ul li a
+        {
+            text-decoration: none;
+            color: wheat;
+        }
+        .fa-bars
+        {
+            line-height: 50px;
+            float: right;
+            margin-right: 8%;
+            font-size: 30px;
+            display: block;
+            color: white;
+        }
+        }
+
+        /* FOR MOBILE VIEW */
+
+
+        @media (min-width:320px) and (max-width:480px) 
+        {
+            *
+        {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            
+        }
+        header
+        {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            background-color: black;
+        }
+            .logo
+        {
+            font-size: 30px;
+            width: 100%;
+            height: inherit;
+     
+        }
+        span
+        {       line-height: 65px;
+            padding-left: 40px;
+            color: gold;
+
+        }
+        nav
+        {
+            width: 70%;
+            height: inherit;
+            background-color: transparent;
+            position: relative;
+            display: block;
+            margin-left: 2%;
+        }
+        nav ul
+        {
+            display: none;
+            position: absolute;
+            background-color: black;
+            width: 30rem;
+            top: 72px;
+            right: 0px;
+        }
+        nav ul li
+        {
+            list-style: none;
+            text-align: center;
+            line-height: 40px;
+            font-size: 20px;
+            left: 30px;
+            display: block;
+        }
+        nav ul li a
+        {
+            text-decoration: none;
+            color: wheat;
+        }
+        .fa-bars
+        {
+            line-height: 50px;
+            float: right;
+            margin-right: 8%;
+            font-size: 30px;
+            display: block;
+            color: white;
+        }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><span>DEEPAK SOLANKI</span></div>
+        <nav>
+            <ul id="menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Service</a></li>
+                <li><a href="">Contect Us</a></li>
+              
+            </ul>
+            <i class="fa-solid fa-bars" id="menutoggle"></i>
+        </nav>
+
+
+    </header>
+
+    <script>
+     
+        $(document).ready(function () 
+        {
+            $("#menutoggle").click(function () 
+            {
+                $("#menu").fadeToggle("3000");
+            })
+        })
+
+    </script>
+
+</body>
+</html>

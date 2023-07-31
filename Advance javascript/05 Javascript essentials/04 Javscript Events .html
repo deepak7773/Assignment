@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JavaScript Events </title>
+</head>
+<body>
+
+    <button id="myButton"> console.log() </button>
+    <hr>
+    <a href="#" id="myLink"> Anchor Link </a>
+    <hr>
+    <button id="writeBtn"> Write Content </button>
+    <div id="output"></div>
+    <hr>
+    <button id="updateButton"> Update Button </button>
+
+    <script>
+
+// console.log()
+        // We can use an event listener on a button to log a message to the console when the button is clicked.   
+
+        var myButton = document.getElementById("myButton");
+        myButton.addEventListener("click", function () {
+            console.log("Console.log() Button Clicked by user");
+        })   
+
+
+// alert()
+        // We can show an alert when a link is clicked.
+
+        var myLink = document.getElementById("myLink");
+        myLink.addEventListener("click", function () {
+            alert(" Anchor link clicked.");
+        })
+
+
+// document.write()
+        // We can use an event listener on a button to write content to the document when the button is clicked.
+
+        var writeBtn = document.getElementById("writeBtn");
+        var outputDiv = document.getElementById("output");
+
+        writeBtn.addEventListener("click", function () {
+            outputDiv.innerHTML = "<p> Button is clicked </p>"
+        })
+
+
+// innerHTML()
+        // We can update content when a button is clicked.
+
+        var updateBtn = document.getElementById("updateButton");
+
+        updateBtn.addEventListener("click", function () {
+            outputDiv.innerHTML = "<b> New clicked  </b>";
+        })
+
+    </script>
+    
+</body>
+</html>

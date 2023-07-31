@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation_Form</title>
+
+</head>
+<body>
+    <form action="" name="myforms" onsubmit="return validation()">
+        <table border="1" align="center">
+            <tr>
+                <th>First Name:-</th>
+                <td><input type="text" id="fname" name="fname"></td>
+            </tr>
+
+            <tr>
+                <th>Last Name:-</th>
+                <td><input type="text" name="lastname">
+                <span style="color: red;" id="LastName"></span>
+                </td>
+            </tr>
+
+            <tr>
+                <th>Password:-</th>
+                <td><input type="password" name="Password"></td>
+            </tr>
+
+            
+            <tr>
+                <th>Confirm Password:-</th>
+                <td><input type="password" name="cpassword"></td>
+            </tr>
+
+            <tr>
+                <th>Email Id:-</th>
+                <td><input type="email" name="email"></td>
+            </tr>
+
+        
+
+            <tr>
+                <th>Phone Number:-</th>
+                <td><input type="tel" name="Phone"></td>
+            </tr>
+
+            <tr>
+                <th>Gender:-</th>
+                <td><input type="radio" name="Gender">Male
+                    <input type="radio" name="Gender">Female
+                </td>
+            </tr>
+
+            <tr>
+                <th>Hobby:-</th>
+                <td>Reading<input type="checkbox" name="chek">
+                Music<input type="checkbox" name="chek">
+                Cricket<input type="checkbox" name="chek">
+                
+                </td>
+            </tr>
+
+            <tr>
+                
+                <td><input type="submit"></td>
+            </tr>
+        </table>
+    </form>
+
+
+    <script>
+    function validation() 
+    {
+
+        //  For First name
+    var fname=document.forms['myforms']["fname"].value;
+    if (fname=="" || fname==null) 
+    {
+        alert("Please Enter the First Name!")
+        return false;
+    }
+    var alpha = /^[A-Za-z]+$/;
+    if (!alpha.test(fname))
+     {
+        alert("Please fill only alpha User First Name");
+        return false;
+    }
+  
+    // For lastname
+var Lastname=document.forms['myforms']['lastname'].value;
+if (Lastname=="" || Lastname==null) 
+{
+    document.getElementById('LastName').innerHTML="Please Enter the Last Name";
+    return false;
+}
+else
+{
+    document.getElementById('LastName').innerHTML="";
+}
+
+// For password 
+
+    var password=document.forms['myforms']['Password'].value;   
+    if (password=="" || password==null) 
+    {
+        alert("Please Enter the password!");
+        return false;
+
+    }
+    if (!(password.lenght >=3 && password.lenght <=8)) 
+    {
+        alert("Please Provide min 3 & max 8 char in password");
+        return false;
+    }password
+
+// For Confirm password
+
+    var confirmpassword=document.forms['myforms']['cpassword'].value;
+    if (password==confirmpassword) 
+    {
+        
+    }
+    else
+    {
+        alert("Please Enter the same Value");
+        return false;
+    }
+
+    // For Email
+    var Email=document.forms['myforms']['email'].value;
+    if (Email=="" || Email==null) 
+    {
+        alert("Please Enter the Email!");
+        return false;
+    }
+    
+    var mail=/^[a-zA-Z0-9_]+@[a-zA-Z]+\.[a-zA-Z]{2,4}$/;
+    if (!mail.test(Email)) 
+    {
+        alert("Please fill proper email id");
+        return false;
+    }
+
+    // For Mobile Number
+    var phone=document.forms["myforms"]["Phone"].value;
+    if (phone=="" || phone==null); 
+    {
+        alert("Please Enter the phone number!");
+        return false;
+    }
+
+    var phon=/^[0-9]{10,11}$/;
+    if (!phon.test(phone))
+     {
+        alert("Please fill only 10 digit");
+        return false;
+    }
+
+    // For hobby 
+    var chek=document.forms['myforms']['chek'].value;
+    if (chek[0].checked == true) 
+    {
+        
+    }
+    else if (chek[1].checked == true)  
+    {
+        
+    }
+    else if (chek[2].checked == true)  
+    {
+        
+    }
+    else if (chek[3].checked == true)  
+    {
+        
+    }
+    else
+    {
+        alert("!Please select any one Hobby");  //alert for select atleast one
+        return false;
+    }
+
+
+ }
+    </script>
+
+</body>
+</html>

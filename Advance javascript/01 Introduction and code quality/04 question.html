@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check input value</title>
+</head>
+<body>
+    <input type="text" id="checkvalue">
+    <!-- on button submit onclick function  -->
+    <button onclick=" return checkvalue()">SUBIMIT BUTTON</button>
+    <script>
+    //     alert( null || 2 || undefined );
+      
+      function checkvalue()
+      {
+          var inputvalue = document.getElementById("checkvalue").value;
+          if (inputvalue == null || inputvalue == 2 || inputvalue == undefined)   //if condition for output 
+          {
+            alert('Hello');  //alert if condition going true
+            return true;
+          } 
+      }
+</script>
+</body>
+</html>
+
+
+

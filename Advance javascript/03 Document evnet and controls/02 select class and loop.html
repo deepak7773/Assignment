@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- when button click then function call after onclick -->
+    <button class="my_class" onclick="clickmes()"> CLICK ME </button>
+
+    <p class="my_class"></p>
+
+    <script>
+        function clickmes()     //call function on onclick
+        {
+        
+            const hereme = document.getElementsByClassName('.my_class');
+
+            for (let i = 0; i<hereme.length; i++)       // for loop use because going check condition 
+            {
+                hereme[i].addEventListener("click",clickmes);
+            }
+            {
+            alert("YOU CLICKED ON THE ELEMENT");    //alert to show we click on the element
+            };
+        }
+    </script>
+</body>
+</html>

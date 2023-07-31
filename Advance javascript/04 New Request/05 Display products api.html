@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Html page</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row" id="Datalist"></div>
+
+</div>
+
+    <script>
+           axios.get('https://fakestoreapi.com/products')
+        .then((res) => {
+            // console.log(res.data);
+            Show_product(res.data)
+        })
+        function Show_product(data) 
+        {
+            var data_List=document.getElementById('Datalist');
+            
+            for (Mydata  of data) 
+            {
+                var htmlcards=`
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="${Mydata.image}" class="card-img-top">
+                        <div class="card-body">
+                            <h4 class="card-title">${Mydata.title}</h4>
+                            </div>
+                        </div>  
+                    
+                    </div>
+                `;
+                data_List.insertAdjacentHTML('beforeend',htmlcards);   
+
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

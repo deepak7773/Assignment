@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Subtotal </title>
+
+    <link rel="stylesheet" href="01 subtotal.css">
+    <script src="01 subtotal.js"></script>
+
+</head>
+<body>
+    
+    <table border="1" cellspacing="0">
+        <tr class="headings">
+            <td> Product Info </td>
+            <td> Quantity </td>
+            <td> Price (per unit) </td>
+            <td> Price (subtotal) </td>
+            <td>  </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="product-card">
+                    <img class="product-image" src="images/download.jfif">
+                    <p> Double Cheese Burger </p>
+                </div>
+            </td>
+            <td> <input type="number" class="quantity" id="bowl-quantity" onkeyup="subtotal()"> </td>
+            <td> <div id="unit-price"> ₹ 79 </div> </td>
+            <td> <div id="subtotal-price-bowl" class="subtotal-price">  </div> </td>
+            <td> <button id="remove-btn" onclick="remove_bowl()"> Remove </button> </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="product-card">
+                    <img class="product-image" src="images/images.jfif">
+                    <p> Double Cheese Burger with French Fries </p>
+                </div>
+            </td>
+            <td> <input type="number" class="quantity" id="glass-quantity" onkeyup="subtotal()"> </td>
+            <td> <div id="unit-price"> ₹ 209 </div> </td>
+            <td> <div id="subtotal-price-glass" class="subtotal-price">  </div> </td>
+            <td> <button id="remove-btn" onclick="remove_glass()"> Remove </button> </td>
+        </tr>
+        <tr class="last-row">
+            <td>  </td>
+            <td>  </td>
+            <td>  </td>
+            <td id="total-amt">  </td>
+            <td>  </td>
+        </tr>
+    </table>
+
+</body>
+</html>
